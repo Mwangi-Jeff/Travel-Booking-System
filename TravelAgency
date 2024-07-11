@@ -70,3 +70,26 @@ class Passenger {
 
     // constructor, getters and setters omitted for brevity
 }
+public static void main(String[] args) {
+    TravelAgency travelAgency = new TravelAgency();
+
+    // Create flights
+    Flight flight1 = new Flight("1");
+    Flight flight2 = new Flight("2");
+    travelAgency.addFlight(flight1);
+    travelAgency.addFlight(flight2);
+
+    // Create passengers
+    Passenger passenger1 = new Passenger("1");
+    Passenger passenger2 = new Passenger("2");
+    travelAgency.addPassenger(passenger1);
+    travelAgency.addPassenger(passenger2);
+
+    // Book flights
+    travelAgency.bookFlight("1", "1"); // Passenger 1 books Flight 1
+    travelAgency.bookFlight("2", "2"); // Passenger 2 books Flight 2
+
+    // Cancel bookings
+    travelAgency.cancelBooking("1", "1"); // Passenger 1 cancels Flight 1
+    travelAgency.cancelBooking("2", "2"); // Passenger 2 cancels Flight 2
+}
